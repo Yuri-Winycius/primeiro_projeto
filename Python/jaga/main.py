@@ -25,14 +25,11 @@ banco_de_dados.adicionar_a_lista(clau.idade)
 banco_de_dados.adicionar_a_lista(clau.get_matricula())
 banco_de_dados.adicionar_a_lista('Resultados ->')
 
-
-while True:
+for c in range(0, 5):
     num1 = randint(1, 10)
     num2 = randint(1, 5)
     resultado = calculadora.calcular('/', num1 = num1, num2 = num2)
     banco_de_dados.adicionar_a_lista(resultado)
     c += 1
-    if c == 5:
-        break
 
 print(banco_de_dados.get_lista())
