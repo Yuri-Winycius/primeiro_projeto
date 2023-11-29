@@ -33,3 +33,22 @@ for c in range(0, 5):
     c += 1
 
 print(banco_de_dados.get_lista())
+
+def __gerador_de_matricula() -> int:
+    number_one = randint(100, 500)
+    number_two = randint(501, 999)
+    number_one = str()
+    number_two = str()
+
+    matricula = number_one + number_two
+    return matricula
+
+def creat_user(nome: str, idade: int):
+    matricula = __gerador_de_matricula()
+    user = Usuario(nome, idade, matricula)
+    return user
+
+user = creat_user('yuri', 20)
+banco_de_dados.adicionar_a_lista(user)
+
+print(banco_de_dados.get_lista())
