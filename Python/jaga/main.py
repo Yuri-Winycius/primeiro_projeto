@@ -5,50 +5,18 @@ from random import randint
 
 banco_de_dados = Banco_de_dados()
 calculadora = Calculadora()
-winy = Usuario('Yuri Winycius', 20, 12345)
-clau = Usuario('Claudete', 38, 23456)
+class Matricula():
+    def gerador_de_matricula(self) -> int:
+        number_one = randint(100, 500)
+        number_two = randint(501, 999)
 
-banco_de_dados.adicionar_a_lista(winy.nome)
-banco_de_dados.adicionar_a_lista(winy.idade)
-banco_de_dados.adicionar_a_lista(winy.get_matricula())
-banco_de_dados.adicionar_a_lista('Resultados ->')
+        number_one = str()
+        number_two = str()
 
-for c in range(0, 5):
-    num1 = randint(1, 10)
-    num2 = randint(1, 5)
-    resultado = calculadora.calcular('*', num1 = num1, num2 = num2)
-    banco_de_dados.adicionar_a_lista(resultado)
-    c += 1
-
-banco_de_dados.adicionar_a_lista(clau.nome)
-banco_de_dados.adicionar_a_lista(clau.idade)
-banco_de_dados.adicionar_a_lista(clau.get_matricula())
-banco_de_dados.adicionar_a_lista('Resultados ->')
-
-for c in range(0, 5):
-    num1 = randint(1, 10)
-    num2 = randint(1, 5)
-    resultado = calculadora.calcular('/', num1 = num1, num2 = num2)
-    banco_de_dados.adicionar_a_lista(resultado)
-    c += 1
-
-print(banco_de_dados.get_lista())
-
-def __gerador_de_matricula() -> int:
-    number_one = randint(100, 500)
-    number_two = randint(501, 999)
-    number_one = str()
-    number_two = str()
-
-    matricula = number_one + number_two
-    return matricula
-
-def creat_user(nome: str, idade: int):
-    matricula = __gerador_de_matricula()
-    user = Usuario(nome, idade, matricula)
-    return user
-
-user = creat_user('yuri', 20)
-banco_de_dados.adicionar_a_lista(user)
-
+        matricula = number_one + number_two
+        return matricula
+    
+main = Matricula() 
+winy = Usuario('Winycius', 20, main.gerador_de_matricula())
+banco_de_dados.adicionar_a_lista(winy)
 print(banco_de_dados.get_lista())
