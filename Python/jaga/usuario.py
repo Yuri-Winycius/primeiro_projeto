@@ -6,3 +6,6 @@ class Usuario:
 
     def get_matricula(self) -> int:
         return self.__matricula
+    
+    def get_usuario(self) -> list:
+        return [self.nome, self.idade, self.get_matricula()]

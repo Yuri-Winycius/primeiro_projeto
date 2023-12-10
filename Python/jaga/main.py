@@ -17,6 +17,9 @@ class Matricula():
         return matricula
     
 main = Matricula() 
-winy = Usuario('Winycius', 20, main.gerador_de_matricula())
-banco_de_dados.adicionar_a_lista(winy)
+matricula = main.gerador_de_matricula()
+print(matricula)
+
+winy = Usuario('Winycius', 20, matricula)
+banco_de_dados.adicionar_a_lista(winy.get_usuario())
 print(banco_de_dados.get_lista())
