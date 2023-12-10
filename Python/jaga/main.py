@@ -7,11 +7,8 @@ banco_de_dados = Banco_de_dados()
 calculadora = Calculadora()
 class Matricula():
     def gerador_de_matricula(self) -> int:
-        number_one = randint(100, 500)
-        number_two = randint(501, 999)
-
-        number_one = str()
-        number_two = str()
+        number_one = str(randint(100, 500))
+        number_two = str(randint(501, 999))
 
         matricula = number_one + number_two
         return matricula
