@@ -18,5 +18,5 @@ matricula = main.gerador_de_matricula()
 print(matricula)
 
 winy = Usuario('Winycius', 20, matricula)
-banco_de_dados.adicionar_a_lista(winy.get_usuario())
-print(banco_de_dados.get_lista())
+banco_de_dados.adicionar_ao_dicionario('usuario' , winy.get_usuario())
+print(banco_de_dados.get_dicionario())
