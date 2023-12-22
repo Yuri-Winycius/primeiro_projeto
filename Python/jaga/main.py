@@ -3,8 +3,6 @@ from calculadora import Calculadora
 from usuario import Usuario
 from random import randint
 
-banco_de_dados = Banco_de_dados()
-calculadora = Calculadora()
 class Matricula():
     def gerador_de_matricula(self) -> int:
         number_one = str(randint(100, 500))
@@ -13,10 +11,18 @@ class Matricula():
         matricula = number_one + number_two
         return matricula
     
-main = Matricula() 
+banco_de_dados = Banco_de_dados()
+calculadora = Calculadora()    
+main = Matricula()
+
 matricula = main.gerador_de_matricula()
-print(matricula)
+
+num1 = 7
+num2 = 8
+multiplicacao = calculadora.calcular('*', num1, num2)
+calculo = [num1 ,num2 , multiplicacao]
 
 winy = Usuario('Winycius', 20, matricula)
 banco_de_dados.adicionar_ao_dicionario('usuario' , winy.get_usuario())
+banco_de_dados.adicionar_ao_dicionario('calculos' , calculo)
 print(banco_de_dados.get_dicionario())
