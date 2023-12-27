@@ -10,8 +10,8 @@ class Banco_de_dados:
         return self.__dicionario
     
     def __set_dicionario(self, chave: str, valor: str) -> None:
-        self.__dicionario = self.__dicionario.get(chave, valor)
+        self.__dicionario[chave] = valor
         
-    def remover_do_dicionario(self) -> list:
-        self.__dicionario.pop('usuario' )
+    def remover_do_dicionario(self, chave) -> list:
+        del self.__dicionario[chave]
         return self.get_dicionario()
