@@ -23,8 +23,12 @@ multiplicacao = calculadora.calcular('*', num1, num2)
 calculo = [num1 ,num2 , multiplicacao]
 
 winy = Usuario('Winycius', 20, matricula)
+
 banco_de_dados.adicionar_ao_dicionario('usuario' , winy.get_usuario())
 banco_de_dados.adicionar_ao_dicionario('calculos' , calculo)
+
 print(banco_de_dados.get_dicionario())
+
 banco_de_dados.remover_do_dicionario('calculos')
+
 print(banco_de_dados.get_dicionario())
