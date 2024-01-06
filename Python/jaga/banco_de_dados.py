@@ -1,17 +1,17 @@
 class Banco_de_dados:
     def __init__(self) -> None:
-        self.__lista = []
+        self.__dicionario = {}
 
-    def adicionar_a_lista(self, lista: str) -> list:
-        self.__set_lista(lista)
-        self.get_lista()
+    def adicionar_ao_dicionario(self, chave: str, valor: str) -> dict:
+        self.__set_dicionario(chave, valor)
+        self.get_dicionario()
 
-    def get_lista(self) -> list:
-        return self.__lista
+    def get_dicionario(self) -> dict:
+        return self.__dicionario
     
-    def __set_lista(self, lista: str) -> None:
-        self.__lista.append(lista)
+    def __set_dicionario(self, chave: str, valor: str) -> None:
+        self.__dicionario[chave] = valor
         
-    def remover_da_lista(self, inde: int) -> list:
-        self.__lista.pop(inde)
-        return self.__lista
+    def remover_do_dicionario(self, chave) -> list:
+        del self.__dicionario[chave]
+        return self.get_dicionario()
