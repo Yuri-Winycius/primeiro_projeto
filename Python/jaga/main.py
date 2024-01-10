@@ -16,11 +16,20 @@ banco_de_dados.adicionar_ao_dicionario('matricula', user.get_matricula())
 
 dicionario = banco_de_dados.get_dicionario()
 
-for itens in dicionario.values():
-    print(itens)
+login = user.usuario_true('Yuri Winycius', 30297010)
 
-if user.usuario_true('Yuri Winycius', 30297010) is True:
+if login is True:
     print('Entrou')
+
+    part1 = calculadora.calcular('+', user.get_idade(), user.get_matricula())
+    part2 = calculadora.calcular('/', part1, 5)
+    banco_de_dados.adicionar_ao_dicionario('calculo', part2)
+
+    print(dicionario)
 
 else:
     print('User or passaword wrong.')
+        
+for chave, valor in dicionario.items():
+    print(chave)
+    print(valor)        
