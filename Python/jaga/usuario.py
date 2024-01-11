@@ -13,7 +13,7 @@ class Usuario:
     def get_idade(self) -> str:
         return self.__idade
 
-    def usuario_true(self, nome, matricula) -> bool:
+    def usuario_is_true(self, nome, matricula) -> bool:
         if nome == self.__nome and matricula == self.__matricula:
             return True
         

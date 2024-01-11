@@ -16,7 +16,7 @@ banco_de_dados.adicionar_ao_dicionario('matricula', user.get_matricula())
 
 dicionario = banco_de_dados.get_dicionario()
 
-login = user.usuario_true('Yuri Winycius', 30297010)
+login = user.usuario_is_true('Yuri Winycius', 30297010)
 
 if login is True:
     print('Entrou')
@@ -31,5 +31,5 @@ else:
     print('User or passaword wrong.')
         
 for chave, valor in dicionario.items():
-    print(chave)
+    print(f'{chave}:')
     print(valor)        
