@@ -31,5 +31,5 @@ else:
     print('User or passaword wrong.')
         
 for chave, valor in dicionario.items():
-    print(f'{chave}:')
-    print(valor)        
+    print(f'{chave}: {valor}')
+         
