@@ -21,15 +21,21 @@ login = user.usuario_is_true('Yuri Winycius', 30297010)
 if login is True:
     print('Entrou')
 
-    part1 = calculadora.calcular('+', user.get_idade(), user.get_matricula())
-    part2 = calculadora.calcular('/', part1, 5)
-    banco_de_dados.adicionar_ao_dicionario('calculo', part2)
+    cal = []
 
-    print(dicionario)
+    for c in range(5):
+        num1 = randint(1, 5)
+        num2 = randint(6, 10)
+        
+        calculo = calculadora.calcular('+', num1, num2)
+        cal.append(calculo)
+
+    banco_de_dados.adicionar_ao_dicionario('calculo', cal)     
+
+    for chave, valor in dicionario.items():
+        print(f'{chave}: {valor}')
+      
 
 else:
     print('User or passaword wrong.')
-        
-for chave, valor in dicionario.items():
-    print(f'{chave}: {valor}')
-         
+           
