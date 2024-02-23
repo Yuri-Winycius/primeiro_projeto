@@ -16,6 +16,12 @@ banco_de_dados.adicionar_ao_dicionario('matricula', user.get_matricula())
 
 dicionario = banco_de_dados.get_dicionario()
 
+def asteristico(num: int) -> str:
+    for i in range(num):
+        print('*' * (i + 1))
+        i += 1
+    
+
 login = user.usuario_is_true('Yuri Winycius', 30297010)
 
 if login is True:
@@ -34,6 +40,8 @@ if login is True:
 
     for chave, valor in dicionario.items():
         print(f'{chave}: {valor}')
+
+    asteristico(5)    
       
 
 else:
