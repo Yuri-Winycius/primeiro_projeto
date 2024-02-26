@@ -38,11 +38,8 @@ if login is True:
 
     banco_de_dados.adicionar_ao_dicionario('calculo', cal)     
 
-    for chave, valor in dicionario.items():
-        print(f'{chave}: {valor}')
-
-    asteristico(5)    
-      
+    for num in dicionario['calculo']: 
+        asteristico(num)
 
 else:
     print('User or passaword wrong.')
