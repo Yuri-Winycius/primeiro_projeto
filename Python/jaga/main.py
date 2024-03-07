@@ -30,8 +30,8 @@ if login is True:
     cal = []
 
     for c in range(5):
-        num1 = randint(1, 5)
-        num2 = randint(6, 10)
+        num1 = randint(1, 2)
+        num2 = randint(3, 4)
         
         calculo = calculadora.calcular('+', num1, num2)
         cal.append(calculo)
