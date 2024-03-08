@@ -2,6 +2,7 @@ from banco_de_dados import Banco_de_dados
 from calculadora import Calculadora
 from usuario import Usuario
 from winy import Winy
+from jogo import Jogo
 from random import randint
     
 banco_de_dados = Banco_de_dados()
@@ -40,6 +41,8 @@ if login is True:
 
     for num in dicionario['calculo']: 
         asteristico(num)
+
+    jogo = Jogo(winy.nome)    
 
 else:
     print('User or passaword wrong.')

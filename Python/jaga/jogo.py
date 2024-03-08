@@ -3,9 +3,9 @@ from random import randint
 class Jogo:
     def __init__(self, usuario) -> None:
         self.__usuario = usuario
-        return self.__jogar()
+        return self.__jogar(self.__usuario)
     
-    def __jogar(self) -> str:
+    def __jogar(self, usuario) -> str:
         print('Vamos jogar, você tem 5 chances.')
 
         num = randint(1, 10)
@@ -14,7 +14,7 @@ class Jogo:
             number = int(input('Adivinhe o número: '))
 
             if number == num:
-                print('ACERTOU!')
+                print(f'ACERTOU {usuario}!')
 
             else:
-                print('Tente novamente.') 
+                print(f'Tente novamente {usuario}.') 
