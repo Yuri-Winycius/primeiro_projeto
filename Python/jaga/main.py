@@ -17,12 +17,6 @@ banco_de_dados.adicionar_ao_dicionario('matricula', user.get_matricula())
 
 dicionario = banco_de_dados.get_dicionario()
 
-def asteristico(num: int) -> str:
-    for i in range(num):
-        print('*' * (i + 1))
-        i += 1
-    
-
 login = user.usuario_is_true('Yuri Winycius', 30297010)
 
 if login is True:
@@ -39,10 +33,7 @@ if login is True:
 
     banco_de_dados.adicionar_ao_dicionario('calculo', cal)     
 
-    for num in dicionario['calculo']: 
-        asteristico(num)
-
-    jogo = Jogo(winy.nome)    
+    jogo = Jogo(winy.nome, 2)    
 
 else:
     print('User or passaword wrong.')
