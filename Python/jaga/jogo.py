@@ -3,9 +3,10 @@ from random import randint
 class Jogo:
     def __init__(self, usuario: str, num: int) -> None:
         self.__usuario = usuario
-        num = int(input('Escolha uma opção:'))
+        print('Escolha uma opção:')
         print('1) Adivinhar')
         print('2) Asteristicos')
+        num = int(input())
 
         if num == 1:
             return self.__jogar(usuario)
